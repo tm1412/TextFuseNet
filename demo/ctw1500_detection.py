@@ -117,16 +117,19 @@ if __name__ == "__main__":
     args = get_parser().parse_args()
 
     cfg = setup_cfg(args)
+    print(cfg)
     detection_demo = VisualizationDemo(cfg)
 
     test_images_path = args.input
     output_path = args.output
 
     start_time_all = time.time()
+    print(start_time_all)
     img_count = 0
     for i in glob.glob(test_images_path):
         print(i)
         img_name = os.path.basename(i)
+        print(img_name)
         img_save_path = output_path + img_name.split('.')[0] + '.jpg'
         img = cv2.imread(i)
         start_time = time.time()
