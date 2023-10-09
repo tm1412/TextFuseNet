@@ -56,4 +56,4 @@ RUN python setup.py build develop
 RUN echo "source activate textfusenet" > ~/.bashrc
 
 # use demo script as an entry point
-ENTRYPOINT python demo/${DEMO_FILE} --weights model.pth --output ./output_images/
+ENTRYPOINT python demo/${DEMO_FILE} --weights model_ic15_r101.pth --output ./output_images/
